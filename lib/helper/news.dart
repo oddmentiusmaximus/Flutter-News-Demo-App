@@ -63,7 +63,7 @@ class SourceNewsClass {
   List<SourceModel> source = [];
   Future<void> getNews() async {
     String url =
-        "http://newsapi.org/v2/top-headlines?country=in&apiKey=b6215eea9749489b8cba7bacea6cbd70";
+        "https://newsapi.org/v2/sources?language=en&country=in&apiKey=b6215eea9749489b8cba7bacea6cbd70";
 
     var response = await http.get(url);
 
