@@ -63,9 +63,9 @@ class _HomeState extends State<Home> {
                           scrollDirection: Axis.vertical,
                           itemBuilder: (context, index) {
                             return CategoryTile(
-//                              imageUrl: categories[index].imageUrl,
-//                              categoryName: categories[index].categoryName,
-                                );
+                              imageUrl: categories[index].imageUrl,
+                              categoryName: categories[index].categoryName,
+                            );
                           }),
                     ),
 
@@ -117,53 +117,53 @@ class _HomeState extends State<Home> {
 }
 
 class CategoryTile extends StatelessWidget {
-//  final String imageUrl, categoryName;
-//  CategoryTile({this.imageUrl, this.categoryName});
+  final String imageUrl, categoryName;
+  CategoryTile({this.imageUrl, this.categoryName});
   @override
   Widget build(BuildContext context) {
-//    return GestureDetector(
-//      onTap: () {
-//        Navigator.push(
-//            context,
-//            MaterialPageRoute(
-//                builder: (context) => CategoryNews(
-//                      category: categoryName.toLowerCase(),
-//                    )));
-//      },
-//      child: Container(
-//        alignment: Alignment.center,
-//        margin: EdgeInsets.only(right: 16),
-//        child: Stack(
-//          children: <Widget>[
-//            ClipRRect(
-//              borderRadius: BorderRadius.circular(6),
-//              child: CachedNetworkImage(
-//                imageUrl: imageUrl,
-//                width: 120,
-//                height: 60,
-//                fit: BoxFit.cover,
-//              ),
-//            ),
-//            Container(
-//              alignment: Alignment.center,
-//              width: 120,
-//              height: 60,
-//              decoration: BoxDecoration(
-//                borderRadius: BorderRadius.circular(6),
-//                color: Colors.black26,
-//              ),
-//              child: Text(
-//                categoryName,
-//                style: TextStyle(
-//                    color: Colors.white,
-//                    fontSize: 15,
-//                    fontWeight: FontWeight.w500),
-//              ),
-//            )
-//          ],
-//        ),
-//      ),
-//    );
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => CategoryNews(
+                      category: categoryName.toLowerCase(),
+                    )));
+      },
+      child: Container(
+        alignment: Alignment.center,
+        margin: EdgeInsets.only(right: 16),
+        child: Stack(
+          children: <Widget>[
+            ClipRRect(
+              borderRadius: BorderRadius.circular(6),
+              child: CachedNetworkImage(
+                imageUrl: imageUrl,
+                width: 120,
+                height: 60,
+                fit: BoxFit.cover,
+              ),
+            ),
+            Container(
+              alignment: Alignment.center,
+              width: 120,
+              height: 60,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(6),
+                color: Colors.black26,
+              ),
+              child: Text(
+                categoryName,
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 15,
+                    fontWeight: FontWeight.w500),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
 
